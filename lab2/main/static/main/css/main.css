@@ -1,0 +1,52 @@
+body{
+    background: #fff;
+}
+
+aside{
+    float: left;
+    background: #99ffcc;
+    width: 20%;
+    padding: 2.5%;
+    height: 200vh;
+    color: #fff;
+    border-right: 5px solid #4d4d4d;
+}
+
+aside ul{list-style: none}
+aside ul li{
+    color: #000066;
+    display: block;
+    margin-top: 20px;
+    transition: transform .5s ease;
+}
+
+aside ul li:hover, aside ul a:hover{
+    color: #eb5959;
+    text-decoration:none;
+    transform: scale(1.1);
+}
+
+main .features{
+    float: left;
+    color: #000000;
+    margin-top: 20px;
+    text-align: center;
+    width: 80%;
+}
+
+main .features h1 {font-size: 40px;}
+main .features p {max-width: 900px; margin: 5px auto;}
+
+.alert-warning {
+    float: left;
+    clear: both;
+    width: 400px;
+    margin: 20px 34%;
+    text-align: left;
+}
+
+form{
+    margin-left: 5%;
+    width: 500px;
+    margin-top: 50px;
+}

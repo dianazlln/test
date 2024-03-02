@@ -1,0 +1,21 @@
+{% extends 'main/lay.html' %}
+
+{% block title %}
+    Написать заявку
+{% endblock %}
+
+{% block content %}
+    <div class="features">
+            <form method="post">
+                <p style="float:left; width:20px;"><h1>Написать заявку</h1></p>
+                {% csrf_token %}<br>
+                {{ form.title }}<br>
+                {{ form.full_text }}<br>
+                {{ form.date }}<br>
+                <span>{{ error }}</span>
+                <button class="btn btn-success" type="submit">Отправить</button>
+            </form>
+    </div>
+
+    {% include 'main/include.html' %}
+{% endblock %}

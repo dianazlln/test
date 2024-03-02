@@ -1,0 +1,23 @@
+{% extends 'main/lay.html' %}
+
+{% block title %}
+    Заявки
+{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Заявки</h1>
+
+        {% for el in news %}
+            <div class="alert alert-warning">
+                <p><h3>{{ el.title }}</h3></p>
+                <p><h5>Номер заявки: {{ el.id }}</h5></p>
+                <p>{{ el.full_text }}</p>
+                <p>{{ el.date }}</p>
+            </div>
+
+        {% endfor %}
+    </div>
+<h6 align="center"><button class="btn"><a href="{% url 'create' %}">Назад</a></button></h6>
+    {% include 'main/include.html' %}
+{% endblock %}

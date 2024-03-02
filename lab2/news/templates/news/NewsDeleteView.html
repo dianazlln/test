@@ -1,0 +1,16 @@
+{% extends 'main/lay.html' %}
+
+{% block title %}Удаление заявки{% endblock %}
+
+{% block content %}
+    <div class="features">
+            <form method="post">
+                {% csrf_token %}<br>
+                <p>Вы уверены, что хотите удалить запрос?</p>
+                <button class="btn btn-success" type="submit">Удалить</button>
+                <p><a href="{% url 'news_home' %}" class="btn-warning">Назад</button></a></p>
+            </form>
+    </div>
+
+    {% include 'main/include.html' %}
+{% endblock %}

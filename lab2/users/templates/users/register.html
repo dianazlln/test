@@ -1,0 +1,17 @@
+{% extends 'main/lay.html' %}
+
+{% block title %}
+    Регистрация
+{% endblock %}
+
+{% block content %}
+<h1>Регистрация</h1>
+
+<form method="post">
+  {% csrf_token %}
+  <input type="hidden" name="next" value="{{ next }}" />
+  {{ form.as_p }}
+    <p><button type="submit">Зарегистрироваться</button></p>
+</form>
+
+{% endblock %}

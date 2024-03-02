@@ -1,0 +1,24 @@
+{% extends 'main/lay.html' %}
+
+{% block title %}
+    Заявки
+{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Заявки</h1>
+
+        {% for el in news %}
+            <div class="alert alert-warning">
+                <p><h3>{{ el.title }}</h3></p>
+                <p><h5>Номер заявки: {{ el.id }}</h5></p>
+                <p>{{ el.full_text }}</p>
+                <p>{{ el.date }}</p>
+                <p><a href="{% url 'NewsUpdateView' el.id %}" class="btn">Ответить</a>
+                    <a href="{% url 'NewsDeleteView' el.id %}" class="btn">Удалить заявку</a></p>
+            </div>
+        {% endfor %}
+    </div>
+
+    {% include 'main/include.html' %}
+{% endblock %}
